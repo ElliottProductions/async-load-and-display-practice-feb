@@ -14,10 +14,36 @@ export function renderCryptids(cryptid){
     isDangerousEl.textContent = `Is Dangerous: ${cryptid.is_dangerous}`;
     
     cryptidCardEl.append(namesEl, sightingsEl, typeEl, isDangerousEl);
-    console.log(namesEl);
+  
 
     return cryptidCardEl;
 
+}
 
+    
+export function renderUtensils(utensil){
 
+    const utensilsCardEl = document.createElement('div');
+    //utensilsCardEl.classList.add('list-card');
+    
+    const namesEl = document.createElement('h4');
+    const isSharpEl = document.createElement('p');
+    const variationsEl = document.createElement('p');
+    const isSpork = document.createElement('p');
+    
+    namesEl.textContent = `${utensil.name}`;
+    isSharpEl.textContent = `Is it sharp?: ${utensil.is_sharp}`;
+    variationsEl.textContent = `Variations: ${utensil.variations}`;
+    isSpork.textContent = `Is it a Spork?: ${utensil.is_spork}`;
+
+    
+        
+    utensilsCardEl.append(namesEl, isSharpEl, variationsEl, isSpork);
+
+    console.log(utensilsCardEl);
+    
+    return utensilsCardEl;
+    
+    
+    
 }
