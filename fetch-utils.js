@@ -29,5 +29,14 @@ export async function getSpaceships() {
     return response.body;
 }
 
+export async function getFruits() {
+    const response = await client
+        .from('fruits')
+        .select('*');
+
+    return response.body;
+
+}
+
 
 

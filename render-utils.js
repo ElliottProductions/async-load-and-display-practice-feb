@@ -40,7 +40,6 @@ export function renderUtensils(utensil){
         
     utensilsCardEl.append(namesEl, isSharpEl, variationsEl, isSpork);
 
-    console.log(utensilsCardEl);
     
     return utensilsCardEl;
     
@@ -69,7 +68,7 @@ export function renderSpaceships(ship){
 
 }
 
-export function getFruits(fruit){
+export function renderFruits(fruit){
     const fruitCardEl = document.createElement('div');
     fruitCardEl.classList.add('list-card');
     
@@ -79,12 +78,12 @@ export function getFruits(fruit){
     const edibleEl = document.createElement('p');
 
     nameEl.textContent = fruit.name;
-    colorEl.textContent = fruit.color;
-    priceEl.textContent = fruit.price;
-    edibleEl.textContent = fruit.edible;
+    colorEl.textContent = `color(s): {fruit.color}`;
+    priceEl.textContent = `price: $${fruit.price}`;
+    edibleEl.textContent = `You can eat it all: ${fruit.ediblecore}`;
 
-    fruitCardEl.appened();
-
-    return fruitCardEl
+    fruitCardEl.append(nameEl, colorEl, priceEl, edibleEl);
+ 
+    return fruitCardEl;
 
 }

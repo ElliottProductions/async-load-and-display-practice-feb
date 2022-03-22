@@ -1,5 +1,5 @@
-import { getCryptids, getUtensils, getSpaceships } from './fetch-utils.js';
-import { renderCryptids, renderUtensils, renderSpaceships } from './render-utils.js';
+import { getCryptids, getUtensils, getSpaceships, getFruits } from './fetch-utils.js';
+import { renderCryptids, renderUtensils, renderSpaceships, renderFruits } from './render-utils.js';
 
 // import functions and grab DOM elements
 const cryptidContainer = document.querySelector('.cryptids');
@@ -37,6 +37,14 @@ window.addEventListener('load', async () => {
 
 
 });
+
+function fetchAndDisplayFruits(allFruits){
+    for (let fruit of allFruits) {
+        const fruitEl = renderFruits(fruit);
+
+        fruitContainer.append(fruitEl);
+    }
+}
 
 function fetchAndDisplaySpaceships(allSpaceships){
     for (let ship of allSpaceships) {
