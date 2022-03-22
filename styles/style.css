@@ -93,4 +93,14 @@ footer {
 .list-card {
     box-shadow: var(--shadow);
     padding: 5px;
+    width: 250px;
+}
+
+.main-sectoin {
+    
+}
+
+.cryptids {
+    display: flex;
+    flex-direction: column;
 }
