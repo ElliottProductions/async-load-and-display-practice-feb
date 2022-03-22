@@ -21,4 +21,13 @@ export async function getUtensils() {
     return response.body;
 }
 
+export async function getSpaceships() {
+    const response = await client
+        .from('spaceships')
+        .select('*');
+
+    return response.body;
+}
+
+
 

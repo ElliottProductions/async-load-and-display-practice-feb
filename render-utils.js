@@ -24,7 +24,7 @@ export function renderCryptids(cryptid){
 export function renderUtensils(utensil){
 
     const utensilsCardEl = document.createElement('div');
-    //utensilsCardEl.classList.add('list-card');
+    utensilsCardEl.classList.add('list-card');
     
     const namesEl = document.createElement('h4');
     const isSharpEl = document.createElement('p');
@@ -46,4 +46,45 @@ export function renderUtensils(utensil){
     
     
     
+}
+
+export function renderSpaceships(ship){
+
+    const shipCardEl = document.createElement('div');
+    shipCardEl.classList.add('list-card');
+    
+    const nameEl = document.createElement('h4');
+    const weightEl = document.createElement('p');
+    const poweredEl = document.createElement('p');
+    const rangeEl = document.createElement('p');
+
+    nameEl.textContent = ship.name;
+    weightEl.textContent = `${ship.weighs} tons.`;
+    poweredEl.textContent = `Runs on ${ship.powered}.`;
+    rangeEl.textContent = `Range: ${ship.range} miles.`;
+
+    shipCardEl.append(nameEl, weightEl, poweredEl, rangeEl);
+
+    return shipCardEl;
+
+}
+
+export function getFruits(fruit){
+    const fruitCardEl = document.createElement('div');
+    fruitCardEl.classList.add('list-card');
+    
+    const nameEl = document.createElement('h4');
+    const colorEl = document.createElement('p');
+    const priceEl = document.createElement('p');
+    const edibleEl = document.createElement('p');
+
+    nameEl.textContent = fruit.name;
+    colorEl.textContent = fruit.color;
+    priceEl.textContent = fruit.price;
+    edibleEl.textContent = fruit.edible;
+
+    fruitCardEl.appened();
+
+    return fruitCardEl
+
 }

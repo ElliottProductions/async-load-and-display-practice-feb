@@ -96,8 +96,9 @@ footer {
     width: 250px;
 }
 
-.main-sectoin {
-    
+.main-section {
+    display: flex;
+    flex-direction: row;
 }
 
 .cryptids {
